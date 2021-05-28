@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../static/css/styles.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid nav-bar">
+            <h4>Made by Raunak Negi</h4>
+        </div>
+        <div class="container-fluid heading-container">
+            <h1>Reddit Flair Detector</h1>
+            <h3>A flair detector for detecting post flairs for Reddit India</h4>
+        </div>
+
+        <div class="container-fluid form-container">
+            <h2>Enter the URL of the post</h2>
+            <form action="/predict" method="POST">
+                <div class="form-control">
+                    <input type="text" id="url" name="url">
+                </div>
+                <button type="submit" class="btn btn-large btn-success">Submit</button>
+            </form>
+        </div>
+        <div class="container-fluid result-container">
+            <p>Predicted Flair: {{predicted}}</p>
+            <p>Actual Flair: {{actual}}</p>
+        </div>
+    </body>
+    
+</html>
